@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "CarUpload";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <h1>@ViewBag.Message</h1>
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <div class="col-md-4">Car Model</div>
+                <div class="col-md-8"><input type="text" name="CarModel" class="form-control"></div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-4">Car Grade</div>
+                <div class="col-md-8"><input type="number" min="1" max="5" name="CarGrade" class="form-control"></div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-4">Year(s) of Use</div>
+                <div class="col-md-8"><input type="number" min="0" name="YearsUsed" class="form-control"></div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-4">Price</div>
+                <div class="col-md-8"><input type="number" step="0.01" min="0" name="Amount" class="form-control"></div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-4">Location</div>
+                <div class="col-md-8"><input type="text" name="SaleLocation" class="form-control"></div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-4">Car Colour</div>
+                <div class="col-md-8"><input type="text" name="CarColour" class="form-control"></div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-4">Customer Id</div>
+                <div class="col-md-8"><input type="number" min="1" max="4" name="CustId" class="form-control"></div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-4">Picture of The Car</div>
+                <div class="col-md-8"><input type="file" name="CarImage" class="form-control"></div>
+            </div>
+
+            <i style="text-align:right; color:red">@ViewBag.ErrorMessage</i>
+            <div class="form-group">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                <button type="submit" class="btn-success">
+                    Submit
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
